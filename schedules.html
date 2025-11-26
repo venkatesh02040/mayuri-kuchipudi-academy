@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Class Schedules | Mayuri Kuchipudi Academy</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <style>
+        .schedule-banner {
+            width: 100%;
+            height: 40vh;
+            background-image: url('./IMAGES/schedule-banner.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 40px;
+            position: relative;
+        }
+
+        .schedule-banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .schedule-banner h1 {
+            color: #F7DDB9;
+            font-size: 3rem;
+            font-family: "Playfair Display", serif;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .schedule-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .slot-card {
+            border: 2px solid #8B1E3F;
+            padding: 20px;
+            border-radius: 12px;
+            background: #FAF6F0;
+        }
+
+        .slot-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+            color: #8B1E3F;
+        }
+
+        .slot-card p {
+            margin: 4px 0;
+            font-size: 1rem;
+        }
+
+        .slot-card button {
+            margin-top: 12px;
+            width: 100%;
+            padding: 12px;
+            background: #8B1E3F;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .slot-card button:hover {
+            background: #6c152f;
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            background: rgba(0, 0, 0, 0.55);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 28px;
+            width: 380px;
+            border-radius: 10px;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .close-btn {
+            float: right;
+            cursor: pointer;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: -10px;
+        }
+
+        .pay-btn {
+            width: 100%;
+            margin-top: 12px;
+            padding: 12px;
+            background: #8B1E3F;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        @media (max-width:600px) {
+            .schedule-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 24px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="wrap nav" role="navigation" aria-label="Primary">
+            <div class="brand">
+                <a href="index.html">
+                    <img src="./IMAGES/mayuri-logo.png" alt="logo">
+                </a>
+            </div>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="schedules.html" class="active">Schedules</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-btns">
+                <a class="ghost" href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <!-- MOBILE DROPDOWN -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="schedules.html" class="active">Schedules</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="mbl-nav-btns">
+                <a class="ghost" href="contact.html">Contact</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="schedule-banner">
+        <h1>Upcoming Class Schedules</h1>
+    </section>
+
+    <!-- SLOTS -->
+    <div class="schedule-container">
+        <div class="schedule-grid" id="slotList">
+
+            <!-- Dummy Data Example -->
+            <div class="slot-card">
+                <h3>Beginner Batch</h3>
+                <p><strong>Time:</strong> 6:00 PM - 7:00 PM</p>
+                <p><strong>Day:</strong> Monday - Friday</p>
+                <p><strong>Seats:</strong> 10 Available</p>
+                <button onclick="openModal('Beginner Batch')">Book Slot</button>
+            </div>
+
+            <div class="slot-card">
+                <h3>Intermediate Batch</h3>
+                <p><strong>Time:</strong> 7:00 PM - 8:00 PM</p>
+                <p><strong>Day:</strong> Monday - Friday</p>
+                <p><strong>Seats:</strong> 6 Available</p>
+                <button onclick="openModal('Intermediate Batch')">Book Slot</button>
+            </div>
+
+            <div class="slot-card">
+                <h3>Weekend Only Batch</h3>
+                <p><strong>Time:</strong> 5:00 PM - 6:30 PM</p>
+                <p><strong>Day:</strong> Saturday & Sunday</p>
+                <p><strong>Seats:</strong> 4 Available</p>
+                <button onclick="openModal('Weekend Only Batch')">Book Slot</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap f-grid">
+            <div class="footer-brand">
+                <div>
+                    <a href="index.html"><img src="./IMAGES/mayuri-logo.png" alt="logo"></a>
+                </div>
+                <p style="color:#D4A373;max-width:60ch">Kuchipudi at Mayuri Kuchipudi Academy is more than movement —it
+                    restores body, mind & soul.</p>
+            </div>
+
+
+            <div>
+                <h4 style="margin:0 0 10px 0">Contact</h4>
+                <ul class="contact-list">
+                    <li><strong>Phone:</strong> <a href="tel:9949956117" style="color:var(--primary)">9949956117</a>
+                    </li>
+                    <li><strong>Email:</strong> <a href="mailto:dance@mayuridanceacademy.com"
+                            style="color:var(--primary)">dance@mayuridanceacademy.com</a></li>
+                    <li><strong>Location:</strong> Andhra Pradesh, India</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top:18px;text-align:center;color:black">
+            © <span id="year"></span> Mayuri Kuchipudi Academy — All rights reserved
+        </div>
+
+    </footer>
+
+
+    <!-- MODAL -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <h2>Book Your Slot</h2>
+            <p id="selectedSlot" style="font-weight:600;color:#8B1E3F "></p>
+
+            <input type="text" placeholder="Your Name">
+            <input type="tel" placeholder="Phone Number">
+            <input type="email" placeholder="Email Address">
+
+            <button class="pay-btn">Proceed to Payment</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(slot) {
+            document.getElementById("bookingModal").style.display = "flex";
+            document.getElementById("selectedSlot").innerText = "Selected Slot: " + slot;
+        }
+
+        function closeModal() {
+            document.getElementById("bookingModal").style.display = "none";
+        }
+    </script>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear(); 
+    </script>
+
+    <script>
+        const ham = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        ham.addEventListener("click", () => {
+            ham.classList.toggle("active");
+            mobileMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

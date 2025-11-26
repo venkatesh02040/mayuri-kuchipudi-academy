@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gallery | Mayuri Kuchipudi Academy – Kuchipudi Photo Showcase</title>
+    <meta name="description"
+        content="Explore the Mayuri Kuchipudi Academy gallery featuring authentic Kuchipudi poses, costumes, performances, and behind-the-scenes glimpses. A visual journey through 35+ years of classical dance heritage." />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- Page-specific CSS (ONLY gallery styles) -->
+    <style>
+        .gallery-section {
+            padding: 80px 0;
+        }
+
+        .gallery-section h1 {
+            text-align: center;
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .gallery-section p {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 18px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .mudhra-section {
+            padding: 24px;
+        }
+
+        .mudhra-section h1 {
+            text-align: left;
+        }
+
+        /* Masonry Grid */
+        .masonry {
+            column-count: 4;
+            column-gap: 12px;
+            padding: 24px;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .masonry-item img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+            height: 290px;
+            border-top-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        .photo-section h1 {
+            padding-left: 24px;
+            text-align: left;
+            margin-bottom: 0px;
+        }
+
+        /* video section */
+
+        .video-section h1 {
+            text-align: left;
+            font-weight: 700;
+            padding-left: 24px;
+            margin-bottom: 0px;
+        }
+
+        .video-section .masonry {
+            column-count: 3;
+            column-gap: 20px;
+        }
+
+        .video-section .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1400px) {
+            .masonry {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .masonry {
+                column-count: 1 !important;
+            }
+
+            .gallery-section h1 {
+                padding: 20px;
+                font-size: 32px;
+                text-align: left;
+            }
+
+            .gallery-section p {
+                padding: 20px;
+                margin-bottom: 0px;
+                text-align: left;
+            }
+
+            .mudhra-section {
+                padding: 20px;
+            }
+
+            .masonry {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER (EXACT COPY) -->
+    <header>
+        <div class="wrap nav" role="navigation" aria-label="Primary">
+            <div class="brand">
+                <a href="index.html">
+                    <img src="./IMAGES/mayuri-logo.png" alt="logo">
+                </a>
+            </div>
+
+            <!-- HAMBURGER -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="schedules.html">Schedules</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-btns">
+                <a class="ghost" href="contact.html">Contact</a>
+                <a class="ghost-e" href="schedules.html">Enroll</a>
+            </div>
+        </div>
+
+        <!-- MOBILE DROPDOWN -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="schedules.html">Schedules</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="mbl-nav-btns">
+                <a class="ghost" href="contact.html">Contact</a>
+                <a class="ghost-e" href="schedules.html">Enroll</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery-section container">
+        <h1>Mayuri Kuchipudi Gallery</h1>
+        <p>Explore the visual journey of Mayuri Kuchipudi Academy classical poses, performances, costumes, and
+            behind-the-scenes moments that define our 35+ years of Kuchipudi heritage.</p>
+
+        <div class="mudhra-section">
+            <h1>Mudhras</h1>
+            <div class="mudra-div">
+                <div class="mudhra-item">
+                    <img src="./IMAGES/mudhras.jpeg" alt="mudhras">
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-section">
+            <h1>Photos</h1>
+            <div class="masonry">
+                <!-- Replace these images with your actual photos -->
+                <div class="masonry-item">
+                    <img src="./IMAGES/GALLERY/g1.png" alt="Kuchipudi dance pose">
+                </div>
+                <div class="masonry-item">
+                    <img src="./IMAGES/GALLERY/g2.png" alt="Classical Indian dance posture">
+                </div>
+                <div class="masonry-item">
+                    <img src="./IMAGES/GALLERY/g3.webp" alt="Traditional Kuchipudi performance">
+                </div>
+                <div class="masonry-item">
+                    <img src="./IMAGES/GALLERY/g4.jpg" alt="Kuchipudi dancer in costume">
+                </div>
+                <div class="masonry-item">
+                    <img src="./IMAGES/GALLERY/g5.jpg" alt="Classical Indian choreography">
+                </div>
+                <div class="masonry-item">
+                    <img src="./IMAGES/GALLERY/g6.jpg" alt="Kuchipudi mudras and steps">
+                </div>
+                <div class="masonry-item">
+                    <img src="./IMAGES/GALLERY/g7.webp" alt="Stage performance Kuchipudi">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="video-section">
+            <h1>Videos</h1>
+
+            <div class="masonry">
+                <!-- Replace YouTube links with your actual video links -->
+                <div class="masonry-item video-item">
+                    <iframe src="https://www.youtube.com/embed/JWhA3ldZcyY?si=JUCiiyzFL7gdhf85"
+                        title="Kuchipudi Dance Performance" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="masonry-item video-item">
+                    <iframe src="https://www.youtube.com/embed/3GIumT0obEU?si=rpFZLvbno9Jy5Tqh"
+                        title="Classical Indian Dance" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="masonry-item video-item">
+                    <iframe src="https://www.youtube.com/embed/8vTNUoHc05k?si=bIco_bS2hFwkc8cM"
+                        title="Stage Performance" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="masonry-item video-item">
+                    <iframe src="https://www.youtube.com/embed/j2jxWbk0awk?si=Cj5aAnH39-BuxJ2T"
+                        title="Kuchipudi Expressions & Mudras" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="masonry-item video-item">
+                    <iframe src="https://www.youtube.com/embed/QBQ3cV3Hs6c?si=vA_iv0zKAR_4SLl7"
+                        title="Indian Classical Group Performance" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (EXACT COPY) -->
+    <footer>
+        <div class="wrap f-grid">
+            <div class="footer-brand">
+                <div>
+                    <a href="index.html"><img src="./IMAGES/mayuri-logo.png" alt="logo"></a>
+                </div>
+                <p style="color:#D4A373;max-width:60ch">Kuchipudi at Mayuri Kuchipudi Academy is more than movement —it
+                    restores body, mind & soul.</p>
+            </div>
+
+
+            <div>
+                <h4 style="margin:0 0 10px 0">Contact</h4>
+                <ul class="contact-list">
+                    <li><strong>Phone:</strong> <a href="tel:9949956117" style="color:var(--primary)">9949956117</a>
+                    </li>
+                    <li><strong>Email:</strong> <a href="mailto:dance@mayuridanceacademy.com"
+                            style="color:var(--primary)">dance@mayuridanceacademy.com</a></li>
+                    <li><strong>Location:</strong> Andhra Pradesh, India</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top:18px;text-align:center;color:black">
+            © <span id="year"></span> Mayuri Kuchipudi Academy — All rights reserved
+        </div>
+
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear(); 
+    </script>
+
+    <script>
+        const ham = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        ham.addEventListener("click", () => {
+            ham.classList.toggle("active");
+            mobileMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
