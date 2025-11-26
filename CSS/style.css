@@ -704,8 +704,8 @@ footer .f-grid {
         font-size: 11px;
     }
 
-    .ghost {
-        font-size: 12px;
+    .ghost ,.ghost-e {
+        font-size: 12px !important;
     }
 
     .teach-grid {
