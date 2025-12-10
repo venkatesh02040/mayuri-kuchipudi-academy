@@ -16,7 +16,7 @@
     /* will scale in media queries */
     --h2: 1.6rem;
     --body-size: 1rem;
-    --container: 1100px;
+    --container: 1300px;
 }
 
 /* Reset & base */
@@ -71,7 +71,7 @@ a {
 
 /* Layout container */
 .wrap {
-    /* max-width: var(--container); */
+    max-width: var(--container);
     margin: 0 auto;
     padding: 40px
 }
@@ -433,19 +433,22 @@ section {
 
 .card h4 {
     margin: 0 0 8px 0;
-    color: var(--neutral-dark)
+    color: var(--neutral-dark);
+    text-align: center;
+    font-size: 15.9px;
 }
 
 .card p {
     margin: 0;
     color: #545454;
-    /* padding: 0px 16px 16px 16px; */
+    text-align: center;
+    font-size: 14px;
 }
 
 /* Achievements */
-.legacy-section {
+/* .legacy-section {
     padding: 60px;
-}
+} */
 
 .legacy-wrapper {
     display: grid;
@@ -456,7 +459,6 @@ section {
 
 .legacy-image img {
     width: 100%;
-    height: 700px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -502,6 +504,21 @@ section {
     }
 }
 
+@media(max-width:900px) {
+.card h4 {
+    margin: 0 0 8px 0;
+    color: var(--neutral-dark);
+    text-align: left;
+    font-size: 15.9px;
+}
+
+.why-to-learn .card h4{
+  margin: 0 0 8px 0;
+    color: var(--neutral-dark);
+    text-align: center;
+    font-size: 15.9px;
+}
+}
 
 @media(max-width:768px) {
     .legacy-wrapper {
@@ -510,7 +527,7 @@ section {
 
     .legacy-image img {
         width: 100%;
-        height: 800px;
+        height: 1100px;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
@@ -553,8 +570,8 @@ section {
     color: #444;
     font-size: 15px;
     line-height: 1.5;
-    text-align: left;
-    padding: 0px 8px;
+    text-align: center;
+    padding: 0px 20px;
 }
 
 .testimonial-card strong {
@@ -594,6 +611,10 @@ footer .f-grid {
 .footer-brand+div strong,
 .footer-brand+div ul li {
     color: var(--primary) !important;
+}
+
+.footer-brand+div h4{
+    font-size: 20px;
 }
 
 
@@ -725,9 +746,9 @@ footer .f-grid {
         padding: 16px
     }
 
-    .legacy-section {
+    /* .legacy-section {
         padding: 20px;
-    }
+    } */
 
     .legacy-image img {
         height: 580px;
@@ -837,8 +858,8 @@ footer .f-grid {
 
 /* Simple content block under hero */
 .about-section {
-    padding: 30px 0;
-    max-width: 900px;
+    /* padding: 30px 0; */
+    /* max-width: 900px; */
     margin: auto;
     text-align: center;
 }
@@ -855,7 +876,7 @@ footer .f-grid {
     color: #444;
     line-height: 1.8;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .about-section img {
@@ -863,7 +884,7 @@ footer .f-grid {
     display: block;
     height: 48px;
     position: relative;
-    left: 37%;
+    left: 41%;
     bottom: 24px;
 }
 
@@ -880,6 +901,7 @@ footer .f-grid {
 .master-section .about-section ul li {
     margin-bottom: 16px;
     line-height: 1.5;
+        margin-left: 56px;
 }
 
 .master-section {
@@ -887,7 +909,7 @@ footer .f-grid {
     grid-template-columns: 1fr 1.5fr;
     gap: 30px;
     align-items: center;
-    padding: 50px;
+    /* padding: 50px; */
 }
 
 .master-section img {
@@ -946,6 +968,30 @@ footer .f-grid {
     .about-hero-left ul li {
         font-size: 15px;
     }
+
+    .about-section img {
+    max-width: 300px;
+    display: block;
+    height: 48px;
+    position: relative;
+    left: 38%;
+    bottom: 24px;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.master-section .about-section ul li {
+    margin-bottom: 16px;
+    line-height: 1.5;
+    margin-left: 22px;
+            font-size: 15px;
+}
 }
 
 @media (max-width: 992px) {
@@ -968,7 +1014,7 @@ footer .f-grid {
     }
 
     .about-section img {
-        left: 34.5%;
+        left: 33%;
     }
 
     .about-hero-left {
@@ -1037,38 +1083,42 @@ footer .f-grid {
     }
 
     .about-section p {
-        font-size: 15px;
+        font-size: 12px;
 
         line-height: 1.4;
 
     }
 
     .master-section .about-section h2 {
-        text-align: left;
+        text-align: center;
+        font-size: 18px;
     }
 
     .master-section .about-section ul li {
         margin-bottom: 16px;
         line-height: 1.4;
-        font-size: 15px;
+        font-size: 12px;
+        margin-left: 2px;
     }
 
     .about-section img {
-        left: 20.5%;
+        left: 19%;
     }
 
-    .cv-intro {
-        text-align: left;
+        .cv-intro {
+        text-align: center;
+        font-size: 12px;
     }
 
     .value-card h3,
     .value-card p,
     .core-values h2 {
-        text-align: left;
+        text-align: center;
+        font-size: 18px;
     }
 
     .value-card p {
-        font-size: 15px;
+        font-size: 12px;
     }
 }
 
@@ -1090,7 +1140,7 @@ footer .f-grid {
 
 
     .about-section img {
-        left: 16.5%;
+        left: 14.5%;
     }
 }
 
@@ -1119,6 +1169,11 @@ footer .f-grid {
     }
 
     .about-section img {
-        left: 9%;
+        left: 6%;
+    }
+
+        .master-section .about-section h2 {
+        text-align: left;
+        font-size: 14px;
     }
 }

@@ -17,6 +17,34 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
 
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+        }
+    </style>
     <!-- Page-specific CSS (ONLY gallery styles) -->
     <style>
         .gallery-section {
@@ -105,7 +133,7 @@
         /* Responsive */
         @media (max-width: 1400px) {
             .masonry {
-                column-count: 3;
+                column-count: 2;
             }
         }
 
@@ -203,80 +231,83 @@
         <p>Explore the visual journey of Mayuri Kuchipudi Academy classical poses, performances, costumes, and
             behind-the-scenes moments that define our 35+ years of Kuchipudi heritage.</p>
 
-        <div class="mudhra-section">
-            <h1>Mudhras</h1>
-            <div class="mudra-div">
-                <div class="mudhra-item">
-                    <img src="./IMAGES/mudhras.jpeg" alt="mudhras">
-                </div>
-            </div>
-        </div>
 
-        <div class="photo-section">
-            <h1>Photos</h1>
-            <div class="masonry">
-                <!-- Replace these images with your actual photos -->
-                <div class="masonry-item">
-                    <img src="./IMAGES/GALLERY/g1.png" alt="Kuchipudi dance pose">
-                </div>
-                <div class="masonry-item">
-                    <img src="./IMAGES/GALLERY/g2.png" alt="Classical Indian dance posture">
-                </div>
-                <div class="masonry-item">
-                    <img src="./IMAGES/GALLERY/g3.webp" alt="Traditional Kuchipudi performance">
-                </div>
-                <div class="masonry-item">
-                    <img src="./IMAGES/GALLERY/g4.jpg" alt="Kuchipudi dancer in costume">
-                </div>
-                <div class="masonry-item">
-                    <img src="./IMAGES/GALLERY/g5.jpg" alt="Classical Indian choreography">
-                </div>
-                <div class="masonry-item">
-                    <img src="./IMAGES/GALLERY/g6.jpg" alt="Kuchipudi mudras and steps">
-                </div>
-                <div class="masonry-item">
-                    <img src="./IMAGES/GALLERY/g7.webp" alt="Stage performance Kuchipudi">
+        <main class="wrap">
+            <div class="mudhra-section">
+                <h1>Mudhras</h1>
+                <div class="mudra-div">
+                    <div class="mudhra-item">
+                        <img src="./IMAGES/mudhras.jpeg" alt="mudhras">
+                    </div>
                 </div>
             </div>
 
-        </div>
-
-        <div class="video-section">
-            <h1>Videos</h1>
-
-            <div class="masonry">
-                <!-- Replace YouTube links with your actual video links -->
-                <div class="masonry-item video-item">
-                    <iframe src="https://www.youtube.com/embed/JWhA3ldZcyY?si=JUCiiyzFL7gdhf85"
-                        title="Kuchipudi Dance Performance" frameborder="0" allowfullscreen>
-                    </iframe>
+            <div class="photo-section">
+                <h1>Photos</h1>
+                <div class="masonry">
+                    <!-- Replace these images with your actual photos -->
+                    <div class="masonry-item">
+                        <img src="./IMAGES/GALLERY/g1.png" alt="Kuchipudi dance pose">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="./IMAGES/GALLERY/g2.png" alt="Classical Indian dance posture">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="./IMAGES/GALLERY/g3.webp" alt="Traditional Kuchipudi performance">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="./IMAGES/GALLERY/g4.jpg" alt="Kuchipudi dancer in costume">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="./IMAGES/GALLERY/g5.jpg" alt="Classical Indian choreography">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="./IMAGES/GALLERY/g6.jpg" alt="Kuchipudi mudras and steps">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="./IMAGES/GALLERY/g7.webp" alt="Stage performance Kuchipudi">
+                    </div>
                 </div>
 
-                <div class="masonry-item video-item">
-                    <iframe src="https://www.youtube.com/embed/3GIumT0obEU?si=rpFZLvbno9Jy5Tqh"
-                        title="Classical Indian Dance" frameborder="0" allowfullscreen>
-                    </iframe>
-                </div>
+            </div>
 
-                <div class="masonry-item video-item">
-                    <iframe src="https://www.youtube.com/embed/8vTNUoHc05k?si=bIco_bS2hFwkc8cM"
-                        title="Stage Performance" frameborder="0" allowfullscreen>
-                    </iframe>
-                </div>
+            <div class="video-section">
+                <h1>Videos</h1>
 
-                <div class="masonry-item video-item">
-                    <iframe src="https://www.youtube.com/embed/j2jxWbk0awk?si=Cj5aAnH39-BuxJ2T"
-                        title="Kuchipudi Expressions & Mudras" frameborder="0" allowfullscreen>
-                    </iframe>
-                </div>
+                <div class="masonry">
+                    <!-- Replace YouTube links with your actual video links -->
+                    <div class="masonry-item video-item">
+                        <iframe src="https://www.youtube.com/embed/JWhA3ldZcyY?si=JUCiiyzFL7gdhf85"
+                            title="Kuchipudi Dance Performance" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
 
-                <div class="masonry-item video-item">
-                    <iframe src="https://www.youtube.com/embed/QBQ3cV3Hs6c?si=vA_iv0zKAR_4SLl7"
-                        title="Indian Classical Group Performance" frameborder="0" allowfullscreen>
-                    </iframe>
+                    <div class="masonry-item video-item">
+                        <iframe src="https://www.youtube.com/embed/3GIumT0obEU?si=rpFZLvbno9Jy5Tqh"
+                            title="Classical Indian Dance" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="masonry-item video-item">
+                        <iframe src="https://www.youtube.com/embed/8vTNUoHc05k?si=bIco_bS2hFwkc8cM"
+                            title="Stage Performance" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="masonry-item video-item">
+                        <iframe src="https://www.youtube.com/embed/j2jxWbk0awk?si=Cj5aAnH39-BuxJ2T"
+                            title="Kuchipudi Expressions & Mudras" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="masonry-item video-item">
+                        <iframe src="https://www.youtube.com/embed/QBQ3cV3Hs6c?si=vA_iv0zKAR_4SLl7"
+                            title="Indian Classical Group Performance" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
     </section>
 
     <!-- FOOTER (EXACT COPY) -->
@@ -307,8 +338,13 @@
             © <span id="year"></span> Mayuri Kuchipudi Academy — All rights reserved
         </div>
 
-    </footer>
 
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/918520917732?text=Hi%20I%20am%20interested%20in%20your%20service" class="whatsapp-float"
+            target="_blank" aria-label="Chat on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+        </a>
+    </footer>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear(); 
     </script>

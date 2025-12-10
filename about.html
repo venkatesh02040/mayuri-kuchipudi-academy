@@ -19,8 +19,36 @@
     <link rel="stylesheet" href="./CSS/style.css">
 
     <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+        }
+    </style>
+    <style>
         .core-values {
-            padding: 30px;
+            /* padding: 30px; */
             text-align: center;
         }
 
@@ -125,11 +153,11 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
-             <div class="mbl-nav-btns">
+            <div class="mbl-nav-btns">
                 <a class="ghost" href="contact.html">Contact</a>
                 <a class="ghost-e" href="schedules.html">Enroll</a>
             </div>
-            
+
         </div>
     </header>
 
@@ -152,93 +180,94 @@
                 <li>Now Available Online — Learn From Home</li>
             </ul>
         </div>
-
-        <!-- <div class="about-card">
-            <h3>Our Legacy</h3>
-
-            <div class="highlight">35+ Years</div>
-            <p>of Kuchipudi teaching experience across AP & beyond.</p>
-
-            <div class="highlight">50+ Awards</div>
-            <p>from cultural academies & national-level dance festivals.</p>
-
-            <p style="margin-top:15px; font-weight:600; color:var(--primary);">
-                Bringing traditional dance training from offline to online without losing authenticity.
-            </p>
-        </div> -->
     </section>
 
     <!-- MAIN CONTENT SECTION -->
-    <section class="about-section">
-        <!-- <h2>Teaching Kuchipudi With Passion & Precision</h2> -->
-        <div>
-            <h2>About Mayuri</h2>
-            <img src="./IMAGES/design1.png" alt="design1">
-        </div>
-        <p>Our academy believes in disciplined practice, classical grounding, and spiritual connection to dance. Every
-            step, every expression, and every movement is taught with care and attention to detail.</p>
-
-        <p>Whether you're a beginner looking to start your classical journey or an experienced dancer aiming to refine
-            your craft, our structured online format ensures you receive personalized, guru-led training from anywhere
-            in the world.</p>
-    </section>
-
-
-    <div class="master-section">
-        <div>
-            <img src="./IMAGES/master-img.jpeg" alt="master">
-        </div>
+    <main class="wrap">
         <section class="about-section">
+            <div>
+                <h2>About Mayuri</h2>
+                <img src="./IMAGES/design1.png" alt="design1">
+            </div>
+            <p>Our academy believes in disciplined practice, classical grounding, and spiritual connection to dance.
+                Every
+                step, every expression, and every movement is taught with care and attention to detail.</p>
 
-            <h2>Shri V. Rama Raju – Artistic Director</h2>
-            <ul>
-                <li>Shri V. Rama Raju, our Artistic Director was trained at the Siddhendra Yogi Kuchipudi Kala Peetham,
-                    the historical cradle of the Kuchipudi art form and a major centre for learning Indian performing
-                    arts.</li>
-                <li>Shri V. Rama Raju is a professional classical dancer under the tutelage of the legendary Padma
-                    Bhushan Dr. Vempati Chinna Satyam, the maestro credited with refining the art form and bringing it
-                    to the global stage.</li>
-                <li>Shri V. Rama Raju embodies immense & rich experience in performing art, teaching and choreography
-                    and is also a firm believer in spreading this knowledge and skill to the best of his ability.</li>
-            </ul>
+            <p>Whether you're a beginner looking to start your classical journey or an experienced dancer aiming to
+                refine
+                your craft, our structured online format ensures you receive personalized, guru-led training from
+                anywhere
+                in the world.</p>
         </section>
-    </div>
 
 
-    <!-- CORE VALUES SECTION -->
-    <section class="core-values container">
-        <h2>Our Core Values</h2>
-        <p class="cv-intro">
-            At Mayuri Kuchipudi Academy, our teaching is rooted in discipline, devotion, and respect for classical
-            heritage.
-            We believe that Kuchipudi is not just an art form it is a spiritual journey connecting body, mind, and soul.
-        </p>
-
-        <div class="values-grid">
-            <div class="value-card">
-                <h3>Tradition & Heritage</h3>
-                <p>Preserving the pure classical structure of Kuchipudi while passing its legacy to future generations.
-                </p>
+        <div class="master-section">
+            <div>
+                <img src="./IMAGES/master-img.jpeg" alt="master">
             </div>
+            <section class="about-section">
 
-            <div class="value-card">
-                <h3>Discipline & Dedication</h3>
-                <p>We cultivate patience, persistence, and devotion—essential qualities for mastering classical dance.
-                </p>
-            </div>
-
-            <div class="value-card">
-                <h3>Expression & Spirituality</h3>
-                <p>Dance is taught as a divine form of expression, connecting emotion with rhythm and storytelling.</p>
-            </div>
-
-            <div class="value-card">
-                <h3>Excellence in Training</h3>
-                <p>Personalized, structured guidance ensuring every student grows with confidence and stage readiness.
-                </p>
-            </div>
+                <h2>Shri V. Rama Raju – Artistic Director</h2>
+                <ul>
+                    <li>Shri V. Rama Raju, our Artistic Director was trained at the Siddhendra Yogi Kuchipudi Kala
+                        Peetham,
+                        the historical cradle of the Kuchipudi art form and a major centre for learning Indian
+                        performing
+                        arts.</li>
+                    <li>Shri V. Rama Raju is a professional classical dancer under the tutelage of the legendary Padma
+                        Bhushan Dr. Vempati Chinna Satyam, the maestro credited with refining the art form and bringing
+                        it
+                        to the global stage.</li>
+                    <li>Shri V. Rama Raju embodies immense & rich experience in performing art, teaching and
+                        choreography
+                        and is also a firm believer in spreading this knowledge and skill to the best of his ability.
+                    </li>
+                </ul>
+            </section>
         </div>
-    </section>
+
+
+        <!-- CORE VALUES SECTION -->
+        <section class="core-values container">
+            <h2>Our Core Values</h2>
+            <p class="cv-intro">
+                At Mayuri Kuchipudi Academy, our teaching is rooted in discipline, devotion, and respect for classical
+                heritage.
+                We believe that Kuchipudi is not just an art form it is a spiritual journey connecting body, mind, and
+                soul.
+            </p>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Tradition & Heritage</h3>
+                    <p>Preserving the pure classical structure of Kuchipudi while passing its legacy to future
+                        generations.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Discipline & Dedication</h3>
+                    <p>We cultivate patience, persistence, and devotion essential qualities for mastering classical
+                        dance.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Expression & Spirituality</h3>
+                    <p>Dance is taught as a divine form of expression, connecting emotion with rhythm and storytelling.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Excellence in Training</h3>
+                    <p>Personalized, structured guidance ensuring every student grows with confidence and stage
+                        readiness.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
 
     <!-- FOOTER (Copied Exactly From index.html) -->
@@ -269,8 +298,13 @@
             © <span id="year"></span> Mayuri Kuchipudi Academy — All rights reserved
         </div>
 
-    </footer>
 
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/918520917732?text=Hi%20I%20am%20interested%20in%20your%20service" class="whatsapp-float"
+            target="_blank" aria-label="Chat on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+        </a>
+    </footer>
     <script>
         // Minimal JS: smooth scroll for internal links
         document.querySelectorAll('a[href^="#"]').forEach(a => {

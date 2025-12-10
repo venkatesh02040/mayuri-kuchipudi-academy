@@ -17,6 +17,34 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
 
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+        }
+    </style>
     <!-- Page-Specific CSS (Only for Blogs Page, No Conflicts) -->
     <style>
         /* HERO */
@@ -198,7 +226,7 @@
             }
         }
 
-         @media (max-width:600px) {
+        @media (max-width:600px) {
             .blogs-hero {
                 text-align: center;
                 padding: 80px 20px;
@@ -389,8 +417,13 @@
             © <span id="year"></span> Mayuri Kuchipudi Academy — All rights reserved
         </div>
 
-    </footer>
 
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/918520917732?text=Hi%20I%20am%20interested%20in%20your%20service" class="whatsapp-float"
+            target="_blank" aria-label="Chat on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+        </a>
+    </footer>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear(); 
     </script>

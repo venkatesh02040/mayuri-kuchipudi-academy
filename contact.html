@@ -18,6 +18,34 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
 
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+        }
+    </style>
     <!-- CONTACT PAGE SPECIFIC CSS -->
     <style>
         .contact-hero {
@@ -60,7 +88,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            padding: 90px;
         }
 
         @media (max-width: 900px) {
@@ -137,87 +164,85 @@
 
 
         /* Responsive */
-@media (max-width:1200px) {
-.contact-hero {
-    background: url(./IMAGES/contact-banner.jpeg) no-repeat center center;
-    background-size: cover;
-    padding: 48px;
-    height: 520px;
-    position: relative;
-}
-}
+        @media (max-width:1200px) {
+            .contact-hero {
+                background: url(./IMAGES/contact-banner.jpeg) no-repeat center center;
+                background-size: cover;
+                padding: 48px;
+                height: 520px;
+                position: relative;
+            }
+        }
 
-@media (max-width: 992px) {
-     .contact-hero {
-        background: url(./IMAGES/contact-banner.jpeg) no-repeat center center;
-        background-size: cover;
-        padding: 48px;
-        height: 420px;
-        position: relative;
-    }       
-}
+        @media (max-width: 992px) {
+            .contact-hero {
+                background: url(./IMAGES/contact-banner.jpeg) no-repeat center center;
+                background-size: cover;
+                padding: 48px;
+                height: 420px;
+                position: relative;
+            }
+        }
 
-@media (max-width: 600px) {
+        @media (max-width: 600px) {
 
-    .contact-hero {
-        background: url(./IMAGES/contact-banner.jpeg) no-repeat center center;
-        background-size: cover;
-        padding: 48px;
-        height: 300px;
-        position: relative;
-    }
+            .contact-hero {
+                background: url(./IMAGES/contact-banner.jpeg) no-repeat center center;
+                background-size: cover;
+                padding: 48px;
+                height: 300px;
+                position: relative;
+            }
 
-.contact-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 40px;
-}
+            .contact-section {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px;
+            }
 
-.contact-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 1;
-}
+            .contact-hero::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.75);
+                z-index: 1;
+            }
 
-.contact-info ul{
-    font-size: 12px;
-}
+            .contact-info ul {
+                font-size: 12px;
+            }
 
-.contact-info p{
-    font-size: 12px;
-}
-}
+            .contact-info p {
+                font-size: 12px;
+            }
+        }
 
-@media (max-width: 380px) {
+        @media (max-width: 380px) {}
 
-}
+        @media (max-width: 350px) {
+            .contact-section {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 12px;
+            }
 
-@media (max-width: 350px) {
-    .contact-section {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 12px;
-    }
+            .contact-hero h1 {
+                font-family: "Playfair Display", serif;
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+                color: var(--primary);
+            }
 
-    .contact-hero h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: var(--primary);
-}
+            .contact-hero p {
+                max-width: 60ch;
+                line-height: 1.7;
+                color: var(--secondary);
+                font-size: 12px;
+            }
 
-.contact-hero p {
-    max-width: 60ch;
-    line-height: 1.7;
-    color: var(--secondary);
-    font-size: 12px;
-}
-
-}
+        }
     </style>
 
 </head>
@@ -267,10 +292,10 @@
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
 
-             <div class="mbl-nav-btns">
+            <div class="mbl-nav-btns">
                 <a class="ghost-e" href="schedules.html">Enroll</a>
             </div>
-            
+
         </div>
     </header>
 
@@ -278,50 +303,52 @@
     <!-- CONTACT HERO -->
     <section class="contact-hero container">
         <h1>Contact Us</h1>
-        <p>Have questions about Kuchipudi classes, online sessions, fees, or schedules? Reach out to us — we’re happy to
+        <p>Have questions about Kuchipudi classes, online sessions, fees, or schedules? Reach out to us. we’re happy to
             assist you.</p>
     </section>
 
 
     <!-- CONTACT SECTION -->
-    <section class="contact-section container">
+    <main class="wrap">
+        <section class="contact-section container">
 
-        <!-- LEFT SIDE -->
-        <div class="contact-info">
-            <h2>Get in Touch</h2>
+            <!-- LEFT SIDE -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
 
-            <ul>
-                <li><strong>Phone:</strong> <a href="tel:9949956117">9949956117</a></li>
-                <li><strong>Email:</strong> <a
-                        href="mailto:dance@mayuridanceacademy.com">dance@mayuridanceacademy.com</a></li>
-                <li><strong>Location:</strong> Andhra Pradesh, India</li>
-            </ul>
+                <ul>
+                    <li><strong>Phone:</strong> <a href="tel:9949956117">9949956117</a></li>
+                    <li><strong>Email:</strong> <a
+                            href="mailto:dance@mayuridanceacademy.com">dance@mayuridanceacademy.com</a></li>
+                    <li><strong>Location:</strong> Andhra Pradesh, India</li>
+                </ul>
 
-            <p style="margin-top:18px;color:var(--neutral-dark);font-weight: 600;">We respond within 24 hours on all
-                working days.</p>
-        </div>
+                <p style="margin-top:18px;color:var(--neutral-dark);font-weight: 600;">We respond within 24 hours on all
+                    working days.</p>
+            </div>
 
 
-        <!-- RIGHT SIDE FORM -->
-        <form class="contact-form">
-            <h2>Send a Message</h2>
+            <!-- RIGHT SIDE FORM -->
+            <form class="contact-form">
+                <h2>Send a Message</h2>
 
-            <label>Name</label>
-            <input type="text" placeholder="Your Full Name" required />
+                <label>Name</label>
+                <input type="text" placeholder="Your Full Name" required />
 
-            <label>Email</label>
-            <input type="email" placeholder="Your Email Address" required />
+                <label>Email</label>
+                <input type="email" placeholder="Your Email Address" required />
 
-            <label>Phone</label>
-            <input type="text" placeholder="Your Phone Number" required />
+                <label>Phone</label>
+                <input type="text" placeholder="Your Phone Number" required />
 
-            <label>Message</label>
-            <textarea rows="5" placeholder="Your message..." required></textarea>
+                <label>Message</label>
+                <textarea rows="5" placeholder="Your message..." required></textarea>
 
-            <button class="btn-cta">Send Message</button>
-        </form>
+                <button class="btn-cta">Send Message</button>
+            </form>
 
-    </section>
+        </section>
+    </main>
 
 
     <!-- FOOTER (Copied Exactly) -->
@@ -352,8 +379,13 @@
             © <span id="year"></span> Mayuri Kuchipudi Academy — All rights reserved
         </div>
 
-    </footer>
 
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/918520917732?text=Hi%20I%20am%20interested%20in%20your%20service" class="whatsapp-float"
+            target="_blank" aria-label="Chat on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+        </a>
+    </footer>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear(); 
     </script>
