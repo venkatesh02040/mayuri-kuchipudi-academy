@@ -512,7 +512,6 @@ section {
 
     .legacy-image img {
         width: 100%;
-        height: 1100px;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
@@ -737,7 +736,7 @@ footer .f-grid {
     } */
 
     .legacy-image img {
-        height: 580px;
+        height: 296px;
     }
 
     .legacy-content h3 {
